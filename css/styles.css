@@ -1,0 +1,146 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tag Selectors */
+
+body {
+  font-size: 15px;
+  font-family: "Lexend Deca";
+}
+
+h1 {
+  font-family: "Big Shoulders Display";
+  color: var(--very-light-gray);
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+p {
+  color: var(--transparent-white);
+  line-height: 1.6;
+}
+
+/* Container */
+
+.container {
+  margin: 10px;
+}
+
+/* Card */
+
+.card {
+  padding: 40px;
+}
+
+.sedans {
+  background-color: var(--bright-orange);
+  border-radius: 5px 5px 0 0;
+}
+
+.suvs {
+  background-color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 5px 5px;
+}
+
+/* Buttons */
+
+.container .card .btn {
+  background-color: var(--very-light-gray);
+  padding: 10px 20px;
+  margin-top: 25px;
+  border-style: solid;
+  border-color: var(--very-light-gray);
+  border-radius: 20px;
+}
+
+.container .sedans .btn {
+  color: var(--bright-orange);
+}
+
+.container .sedans .btn:hover {
+  color: var(--very-light-gray);
+  background-color: var(--bright-orange);
+}
+
+.container .suvs .btn {
+  color: var(--dark-cyan);
+}
+
+.container .suvs .btn:hover {
+  color: var(--very-light-gray);
+  background-color: var(--dark-cyan);
+}
+
+.container .luxury .btn {
+  color: var(--very-dark-cyan);
+}
+
+.container .luxury .btn:hover {
+  color: var(--very-light-gray);
+  background-color: var(--very-dark-cyan);
+}
+
+/* Attribution */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 750px) {
+
+  /* Tag Selectors */
+
+  body {
+    place-items: center;
+    display: grid;
+    min-height: 100vh;
+  }
+
+  /* Container */
+
+  .container {
+    display: flex;
+    max-width: 900px;
+  }
+
+  /* Card */
+
+  .card {
+    padding: 45px;
+  }
+
+  .sedans {
+    border-radius: 5px 0 0 5px;
+  }
+
+  .luxury {
+    border-radius: 0 5px 5px 0;
+  }
+
+  /* Buttons */
+
+  .container .card .btn {
+    margin-top: 80px;
+  }
+
+}
